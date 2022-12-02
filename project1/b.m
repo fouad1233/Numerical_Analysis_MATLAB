@@ -1,0 +1,6 @@
+xvalues = [0 1.2 2.4 3.6 4.8 6];
+yvalues=[10.0000 6.7113 0.0251 -3.9177 -2.4043 1.5065];
+lpoli = lagrangeip(xvalues, yvalues , 5);
+disp(lpoli);
+lpoli = vpa(lpoli , 10);
+disp(lpoli);
