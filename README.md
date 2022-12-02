@@ -11,6 +11,3 @@ This project include numeric interpolation and root find methods
 - Newthon-raphson methode
 - Secant methode
 
-
-
-> As an extra a analyse report is included in Turkish.
