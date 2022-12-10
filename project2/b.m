@@ -24,8 +24,8 @@ g_e = three_point_end_point(@p,fi,fi(2));
 polarplot(fi, g_e)
 %%
 dxfi_dfi_m = three_point_middle_point(x,fi,fi(2));
-dyfi_dfi_m = three_point_middle_point(y,fi,fi(2));
-plot(dxfi_dfi_m,dyfi_dfi_m )
+dyfi_dfi_m = three_point_middle_point(y,fi,fi(2));polarplot(lx(@L,dxfi_dfi_e, dyfi_dfi_e), ly(@L, dxfi_dfi_e,dyfi_dfi_e) )
+polarplot(lx(@L,dxfi_dfi_m, dyfi_dfi_m), ly(@L, dxfi_dfi_m,dyfi_dfi_m) )
 %%
 g_m = three_point_middle_point(@p,fi,fi(2));
 polarplot(fi, g_m)
