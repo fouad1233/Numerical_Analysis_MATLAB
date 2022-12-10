@@ -19,7 +19,7 @@ end
 y= [];
 for i=1:length(fi) 
     for j= 1: length(interval_points) -1
-        if fi(i) < interval_points(j+1) && fi(i) >=interval_points(j)
+        if fi(i) <= interval_points(j+1) && fi(i) >=interval_points(j)
             y(i) = sum(cell2mat(H(1,j)) .* [1,fi(i),fi(i)^2,fi(i)^3],"all");
         end
     end
