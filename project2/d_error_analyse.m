@@ -2,9 +2,11 @@ fi = linspace(0,2*pi,360);
 y_h = Hermit(@p,[0,2*pi],fi,360); 
 xh =@(fi) y_h .*cos(fi);
 yh =@(fi) y_h .*sin(fi); 
+
 %%
-x =@(fi) p(fi) .*cos(fi);
-y =@(fi) p(fi) .*sin(fi); 
+p_fi = p(fi);
+x =@(fi) p_fi .*cos(fi);
+y =@(fi) p_fi .*sin(fi); 
 %%
 t = tiledlayout(2,4);
 
@@ -15,7 +17,13 @@ dxfi_dfi_f = forward_difference_deritave(x,fi,fi(2));
 dyfi_dfi_f = forward_difference_deritave(y,fi,fi(2));
 
 nexttile
-polarplot(lx(@L,dxfi_dfi_f, dyfi_dfi_f)  , ly(@L, dxfi_dfi_f_h,dyfi_dfi_f_h) -ly(@L, dxfi_dfi_f,dyfi_dfi_f) ./ ly(@L, dxfi_dfi_f,dyfi_dfi_f) )
+%%
+polarplot(lx(@L,dxfi_dfi_f_h, dyfi_dfi_f_h), ly(@L, dxfi_dfi_f_h,dyfi_dfi_f_h) )
+hold on 
+polarplot(lx(@L,dxfi_dfi_f, dyfi_dfi_f), ly(@L, dxfi_dfi_f,dyfi_dfi_f) ,"*",'MarkerIndices',1:3:length(ly(@L, dxfi_dfi_f,dyfi_dfi_f)))
+%%
+
+%polarplot(lx(@L,dxfi_dfi_f, dyfi_dfi_f)  , ly(@L, dxfi_dfi_f_h,dyfi_dfi_f_h) -ly(@L, dxfi_dfi_f,dyfi_dfi_f) ./ ly(@L, dxfi_dfi_f,dyfi_dfi_f) )
 title("lx and ly forward difference")
 %%
 h= fi(2);
