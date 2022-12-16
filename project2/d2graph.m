@@ -75,7 +75,7 @@ title("lx and ly three point end point")
 %%
 %%%%%%%%%%%%%%
 h= fi(2);
-g_e_h = (1/2.*h) * (-3.*y_h(1:358) + 4.*y_h(2:359) -y_h(3:360));
+g_e_h = (1/(2*h)) * (-3.*y_h(1:358) + 4.*y_h(2:359) -y_h(3:360));
 g_e = three_point_end_point(@p,fi,fi(2));
 nexttile
 polarplot(fi(1:358), g_e_h)
@@ -98,7 +98,7 @@ title("lx and ly middle point")
 %%
 %%%%%%%%%%%%
 h= fi(2);
-g_m_h = (1/2* h) * (y_h(3:360) -y_h(1:358) );
+g_m_h = (1/(2* h)) * (y_h(3:360) -y_h(1:358) );
 g_m = three_point_middle_point(@p,fi,fi(2));
 nexttile
 polarplot(fi(2:359), g_m_h)

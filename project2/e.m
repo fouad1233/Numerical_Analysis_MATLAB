@@ -6,6 +6,6 @@ dyfi_dfi_m_p = three_point_middle_point(y_p,fi,fi(2));
 
 dh =@(L,fi,difxfi, difyfi) lx(L,difxfi, difyfi) .* cos(fi)...
     + ly(L,difxfi, difyfi) .* sin(fi);
-valueofdh_p=dh(@L,fi,dxfi_dfi_m,dyfi_dfi_m);
+valueofdh_p=dh(@L,fi,dxfi_dfi_m_p,dyfi_dfi_m_p);
 polarplot(fi,valueofdh_p)
 

@@ -36,7 +36,7 @@ polarplot(lx(@L,dxfi_dfi_e, dyfi_dfi_e), ly(@L, dxfi_dfi_e,dyfi_dfi_e) )
 title("lx and ly three point end point")
 
 h= fi(2);
-g_e = (1/2*h) * (-3*y_h(1:358) + 4*y_h(2:359) -y_h(3:360));
+g_e = (1/(2*h)) * (-3*y_h(1:358) + 4*y_h(2:359) -y_h(3:360));
 nexttile
 polarplot(fi(1:358), g_e)
 title("g three point end point")
@@ -48,7 +48,7 @@ polarplot(lx(@L,dxfi_dfi_m, dyfi_dfi_m), ly(@L, dxfi_dfi_m,dyfi_dfi_m) )
 title("lx and ly middle point")
 
 h= fi(2);
-g_m = (1/2* h) * (y_h(3:360) -y_h(1:358) );
+g_m = (1/(2* h)) * (y_h(3:360) -y_h(1:358) );
 nexttile
 polarplot(fi(2:359), g_m)
 title("g middle point")
